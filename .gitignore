@@ -1,0 +1,7 @@
+reactpatterns
+.cache
+node_modules
+.DS_Store
+.next
+pages/hooks.md
+out/
