@@ -25,7 +25,7 @@ module.exports = withCSS(
     exportPathMap: async function(defaultPathMap) {
       return {
         "/": { page: "/" },
-        "/hooks": { page: "/hooks" }
+        // "/hooks": { page: "/hooks" }
       };
     }
   })
