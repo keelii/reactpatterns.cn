@@ -85,7 +85,7 @@ body {
   font-size: 24px;
   margin: 5vw 5vw 0;
   color: #111;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Source Han Sans CN", -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.4;
 }
 @media (min-width: 0) {
@@ -120,13 +120,13 @@ h4,
 h5,
 h6 {
   font-size: 1em;
-  font-weight: 900;
+  font-weight: bold;
 }
 h2 {
   margin-top: 12vw;
 }
 p {
-  font-family: Athelas, Georgia, serif;
+  font-family: "source han serif cn", Athelas, Georgia, serif;
 }
 pre code {
   display: table;
@@ -162,7 +162,9 @@ code,
 }
 code {
   background-color: rgba(0, 0, 0, 0.08);
-  padding: 0.25em 0.25em;
+  padding: 0.1em 0.20em;
   margin: -0.25em 0;
 }
 
+
+/*# sourceMappingURL=styles.chunk.css.map*/
