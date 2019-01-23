@@ -12,7 +12,7 @@ let withMDX = require("@zeit/next-mdx")({
   extension: /.mdx?$/,
   options: {
     mdPlugins,
-    heading: "Contents",
+    heading: "目录",
     maxDepth: 2,
     rel: "noreferrer"
   }

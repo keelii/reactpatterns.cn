@@ -39,7 +39,7 @@ export default class MyApp extends App {
             content="React patterns from beginners to advanced developers. Simple examples, short descriptions, and quality advice."
           />
         </Head>
-        <div style={{ maxWidth: "30em" }}>
+        <div style={{ maxWidth: "33em" }}>
           <Component {...pageProps} />
         </div>
       </Container>

@@ -4,7 +4,7 @@ import Head from "next/head";
 
 # React 模式（中文版） [on Github](https://github.com/keelii/reactpatterns.cn)
 
-## Contents
+## 目录
 
 ## 函数组件 (Function component)
 
@@ -19,7 +19,6 @@ function Greeting() {
 ```
 
 从第一个形参中获取属性集 (props)
-Collect `props` from the first argument of your function.
 
 ```jsx
 function Greeting(props) {
@@ -109,7 +108,7 @@ function Greeting({ name, ...restProps }) {
 
 ---
 
-## JSX 中的展开属性 (JSX spread attributes)
+## JSX 中的属性展开 (JSX spread attributes)
 
 属性展开是 [JSX](https://reactjs.org/docs/introducing-jsx.html) 中的一个的特性。
 
@@ -133,7 +132,6 @@ function Greeting({ name, ...restProps }) {
 ```
 
 避免传递非 DOM 属性到组件上。
-Avoid forwarding non-DOM `props` to components.  
 解构赋值是如此的受欢迎，是因为它可以分离 `组件特定的属性` 和 `DOM/平台特定属性`
 
 ```jsx
@@ -164,7 +162,7 @@ function MyButton(props) {
 ```
 在这个例子中把 `btn` 替换成 `delete-btn`
 
-[JSX 中的展开属性](#JSX-中的展开属性-(JSX-spread-attributes)) 对先后顺序是敏感的
+[JSX 中的属性展开](#JSX-中的属性展开-(JSX-spread-attributes)) 对先后顺序是敏感的
 
 扩散属性中的 `className` 会覆盖组件上的 `className`。
 
@@ -186,7 +184,7 @@ function MyButton({ className, ...props }) {
 }
 ```
 
-为了保证 `undefined` 被显示在 className 上，可以使用 [默认值](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Default_values_2)。
+为了保证 `undefined` 不被显示在 className 上，可以使用 [默认值](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Default_values_2)。
 
 ```jsx
 function MyButton({ className = "", ...props }) {
@@ -382,7 +380,7 @@ return React.Children.only(this.props.children);
 
 ## 代理组件 (Proxy component)
 
-_(我并不确定这个名字的准确叫法 `译：代理、中介、装饰...`)_
+_(我并不确定这个名字的准确叫法 `译：代理、中介、装饰?`)_
 
 按钮在 web 应用中随处可见。并且所有的按钮都需要一个 `type="button"` 的属性。
 
@@ -411,7 +409,7 @@ const Button = props =>
 
 这也是一种 [代理组件](#代理组件-proxy-component)，用来处理样式。
 
-假如我们有一个按钮，它使用了 "primary" 做为样式类。
+假如我们有一个按钮，它使用了「primary」做为样式类。
 
 ```jsx
 <button type="button" className="btn btn-primary">
@@ -450,7 +448,7 @@ PrimaryBtn()
 <button type="button" className="btn btn-primary" />
 ```
 
-这对于样式维护来说是非常好的。它将样式的所有关注点分离到单个组件。
+这对于样式维护来说是非常好的。它将样式的所有关注点分离到单个组件上。
 
 ## 组织事件 (Event switch)
 
@@ -518,14 +516,14 @@ class HorizontalSplit extends React.Component {
     <FlexContainer>
       <div>{this.props.leftSide}</div>
       <div>{this.props.rightSide}</div>
-    </FlexContainer>;
+    </FlexContainer>
   }
 }
 ```
 
 ## 容器组件 (Container component)
 
-"容器用来获取数据然后渲染到子组件上，仅仅如此。"&mdash;[Jason Bonta](https://twitter.com/jasonbonta)
+「容器用来获取数据然后渲染到子组件上，仅仅如此。」&mdash;[Jason Bonta](https://twitter.com/jasonbonta)
 
 这有一个 `CommentList` 组件。
 
@@ -679,7 +677,7 @@ _(最好是在一个状态化的组件上处理事件对象)_
 <input type="text" />
 ```
 
-当你在浏览器中调整此输入时，你会看到您的更改。 这个是正常的
+当你在浏览器中调整此输入时，你会看到你的更改。 这个是正常的
 
 受控的输入不允许 DOM 变更，这使得这个模式成为可能。通过在组件范围中设置值而不是直接在 DOM 范围中修改
 
@@ -687,7 +685,7 @@ _(最好是在一个状态化的组件上处理事件对象)_
 <input type="text" value="This won't change. Try it." />
 ```
 
-显示静态的输入框值对于用户来说并没有什么用处，所以，我们从状态中传递一个值到 input 上。
+显示静态的输入框值对于用户来说并没有什么用处。所以，我们从状态中传递一个值到 input 上。
 
 ```jsx
 class ControlledNameInput extends React.Component {
@@ -702,7 +700,7 @@ class ControlledNameInput extends React.Component {
 }
 ```
 
-然后改变组件的状态的时候 input 的值就自动改变了。
+然后当你改变组件的状态的时候 input 的值就自动改变了。
 
 ```jsx
 return (
@@ -714,4 +712,4 @@ return (
 ```
 这是一个受控的输入框。它只会在我们的组件状态发生变化的时候更新 DOM。这在创建一致 UI 界面的时候非常有用。
 
-_如果你使用 [函数组件](#函数组件-function-component) 做为表单元素，那就得阅读 [状态提升](#状态提升-state-hoisting) 一节，把状态转移到上层的组件树上。
+_如果你使用 [函数组件](#函数组件-function-component) 做为表单元素，那就得阅读 [状态提升](#状态提升-state-hoisting) 一节，把状态转移到上层的组件树上。_
