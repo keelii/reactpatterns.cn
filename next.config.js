@@ -20,7 +20,7 @@ let withMDX = require("@zeit/next-mdx")({
 
 module.exports = withCSS(
   withMDX({
-    assetPrefix: './',
+    // assetPrefix: './',
     pageExtensions: ["js", "jsx", "md", "mdx"],
     exportPathMap: async function(defaultPathMap) {
       return {
