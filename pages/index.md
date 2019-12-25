@@ -716,6 +716,6 @@ _如果你使用 [函数组件](#函数组件-function-component) 做为表单�
 
 <p>　　</p>
 
-<p><font size="4">京ICP备19045330号-1</font></p>
+<p><font size="4"><a href="http://beian.miit.gov.cn/" target="_blank">京ICP备19045330号-1</a></font></p>
 
 <p>　　</p>
